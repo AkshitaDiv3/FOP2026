@@ -9,6 +9,6 @@ TA = basic_salary * 0.05;
 gross_salary = basic_salary + HRA + TA;
 tax = gross_salary * 0.02;
 net_salary = gross_salary - tax;
-printf("net salry payable is:" , "%f" , &net_salary);
+printf("net salry payable is:%f", &net_salary);
 return 0;
 }

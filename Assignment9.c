@@ -1,7 +1,7 @@
-#inculde<stdio.h>
+#include <stdio.h>
       void main()
 { 
-  int orig , num , result=oij rem
+  int num,orig,rem,result;
 printf("Enter number:");
 scanf("%d", &num);
 num = orig;
