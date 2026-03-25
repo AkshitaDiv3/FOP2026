@@ -6,7 +6,6 @@ int main() {
     printf("Enter a number: ");
     scanf("%d", &num);
     
-    // Calculate square
     square = num * num;
     printf("Square of %d is %d\n", num, square);
     
@@ -21,7 +20,6 @@ int main() {
     printf("Enter a number: ");
     scanf("%d", &num);
     
-    // Calculate square
     square = num * num;
     printf("Square of %d is %d\n", num, square);
     
@@ -35,7 +33,6 @@ int main() {
     printf("Enter a number: ");
     scanf("%d", &num);
     
-    // Calculate cube
     cube = num * num * num;
     printf("Cube of %d is %d\n", num, cube);
     
