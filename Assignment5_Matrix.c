@@ -33,15 +33,12 @@ int main() {
     for(int i=0; i<2; i++)
         for(int j=0; j<2; j++) scanf("%f", &a[i][j]);
 
-    // Determinant calculation: (ad - bc)
     det = a[0][0] * a[1][1] - a[0][1] * a[1][0];
 
     if(det == 0) {
         printf("\nInverse does not exist (Determinant is 0).\n");
     } else {
         printf("\nInverse Matrix:\n");
-        // Formula: (1/det) * [ d  -b ]
-        //                   [ -c  a ]
         printf("%.2f\t%.2f\n",  a[1][1]/det, -a[0][1]/det);
         printf("%.2f\t%.2f\n", -a[1][0]/det,  a[0][0]/det);
     }
@@ -62,7 +59,6 @@ int main() {
         for(j=0; j<c; j++) scanf("%d", &mat[i][j]);
 
     for(i=0; i<r; i++) {
-        // 1. Find the minimum element in the current row
         min_row = mat[i][0];
         col_idx = 0;
         for(j=1; j<c; j++) {
@@ -72,7 +68,6 @@ int main() {
             }
         }
 
-        // 2. Check if this minimum is the maximum in its column
         for(k=0; k<r; k++) {
             if(mat[k][col_idx] > min_row) break;
         }
@@ -96,14 +91,14 @@ int main() {
     printf("Enter odd size: ");
     scanf("%d", &n);
 
-    i = 0; j = n / 2; // Starting position
+    i = 0; j = n / 2; 
     for (k = 1; k <= n * n; k++) {
         sq[i][j] = k;
         int next_i = (i - 1 + n) % n;
         int next_j = (j + 1) % n;
 
-        if (sq[next_i][next_j]) i = (i + 1) % n; // If occupied, move down
-        else { i = next_i; j = next_j; }         // Else move up-right
+        if (sq[next_i][next_j]) i = (i + 1) % n; 
+        else { i = next_i; j = next_j; }         
     }
 
     for (i = 0; i < n; i++) {
