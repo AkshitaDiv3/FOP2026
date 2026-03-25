@@ -16,5 +16,3 @@ if(num==result)
 else
   printf("Not Armstrong");
 }
-
-        
