@@ -1,1 +1,27 @@
+#include<stdio.h>
 
+void swapWithPointers(int *a, int *b){
+     int temp = *a;
+     *a = *b;
+     *b = temp;
+}
+
+int main(){
+    int x = 10, y = 20;
+    int temp;
+    printf("Original: x = %d, y = %d\n\n", x, y);
+
+*Without pointers:
+
+    temp = x;
+    x = y;
+    y = temp;
+    printf("After swap (without pointers): x = %d, y = %d\n", x, y);
+
+*With pointers:
+
+   swapWithePointers(&x, &y);
+   printf("After swap (with pointers): x = %d, y = %d\n", x, y);
+
+return 0;
+}
